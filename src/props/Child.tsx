@@ -1,5 +1,20 @@
 import React from "react";
 
-export const Child = () => {
-  return <div></div>;
+type ChildProps = {
+  color: string;
+  onButtonClick: () => void;
+};
+
+export const Child: React.FC<ChildProps> = ({
+  color,
+  onButtonClick,
+  children,
+}) => {
+  return (
+    <div>
+      {children}
+      {color}
+      <button onClick={onButtonClick}>Click me</button>
+    </div>
+  );
 };
