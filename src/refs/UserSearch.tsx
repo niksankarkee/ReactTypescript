@@ -22,6 +22,7 @@ const UserSearch: React.FC = () => {
     setName(e.target.value);
   };
 
+  // Test comment for push
   const onClickHandler = () => {
     const foundUser = users.find((user) => {
       return user.name === name;
